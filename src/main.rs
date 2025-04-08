@@ -10,7 +10,7 @@ use std::f32::consts::TAU;
 
 /// World size of the hexagons (outer radius)
 const HEX_SIZE: Vec2 = Vec2::splat(8.0);
-const CHUNK_SIZE: u32 = 2;
+const CHUNK_SIZE: u32 = 1;
 const COLORS: [Color; 3] = [Color::Srgba(BLUE), Color::Srgba(RED), Color::Srgba(GREEN)];
 
 fn main() {
