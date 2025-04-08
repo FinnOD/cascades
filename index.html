@@ -3,8 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <title>Hexgrid Bevy</title>
-  </head>
+  <link rel="modulepreload" href="/cascades/cascades-f8ffa84062ba53ed.js" crossorigin="anonymous" integrity="sha384-DoooSY6rtJu5OKWojswvQ0k2mFqBcz9yMUadYRIPffsgH5IpCnqEVY6nCbzDeWtK"><link rel="preload" href="/cascades/cascades-f8ffa84062ba53ed_bg.wasm" crossorigin="anonymous" integrity="sha384-bv9AFb9LtB+BY8NomnNweCb7+W4F/1OdE7AIJy5M2LmzZEt0IoBZ3OqBFh3L4w8V" as="fetch" type="application/wasm"></head>
   <body>
-    <link data-trunk rel="rust" style="width: 100px" />
+    
+<script type="module">
+import init, * as bindings from '/cascades/cascades-f8ffa84062ba53ed.js';
+const wasm = await init({ module_or_path: '/cascades/cascades-f8ffa84062ba53ed_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
   </body>
 </html>
